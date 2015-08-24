@@ -13,8 +13,8 @@ package currying
  * To be able to miss some of parameters we have to use "_".
  */
 object CurryingTest extends App {
-
-{ // 1. not Currying - it just returns a anonymous function with predefined body/algorithm
+//currying example 1
+{ 
   def add1(a:Int) = { b:Int => a + b } // use anonymous function, that expect b:Int as param and use "a" from parent-function
   // 1.1
   println ("1.1: " + add1(5)(6))
@@ -31,7 +31,7 @@ object CurryingTest extends App {
 
   println()
 
-{ // 2. Currying - it does not return a function - it returns an Int result.
+{ // ex 2. Currying - it does not return a function - it returns an Int result.
   // It expects 2nd parameter to be passed,
   // but if that is not provided - it returns a function that expects this parameter
   def add2(a:Int)(b:Int) = {a + b}
